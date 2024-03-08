@@ -5,10 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
 </head>
 
 <body>
+    <form class="form">
+        <p id="heading">
+            <i class="fa-solid fa-users"></i>Login
+        </p>
+        <div class="field">
+            <i class="fa-regular fa-users"></i>
+            <input autocomplete="off" id="user-name" placeholder="Username" class="input-field" type="text">
+        </div>
+        <div class="field">
+            <i class="fa-solid fa-lock"></i>
+            <input placeholder="Password" id="input-pass" class="input-field" type="password">
 
+        </div>
+        <div class="btn">
+            <button id="btn" class="button1">Login</button>
+            <button class="button2">Sing Up</button>
+        </div>
+        <button class="button3">Forgot Password</button>
+    </form>
 </body>
 
 </html>
