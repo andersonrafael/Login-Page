@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    /* Adicionado para permitir que o footer fique no final da página */
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    min-height: 100vh;
+    /* Garante que o body ocupe no mínimo 100% da altura da viewport */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.8em;
+    padding-right: 20px;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-list li {
+    margin-left: 20px;
+}
+
+.menu-list a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.menu-list a:hover {
+    background-color: #575757;
+}
+
+main {
+    flex-grow: 1;
+    /* Faz com que o conteúdo principal ocupe o espaço restante */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    /* Empurra o footer para a parte inferior da página */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsividade: para telas menores */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .site-title {
+        font-size: 1.5em;
+        padding-right: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .menu-list.active {
+        display: flex;
+    }
+
+    .menu-list li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu-list a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #575757;
+    }
+
+    .menu-list li:last-child a {
+        border-bottom: none;
+    }
+}
