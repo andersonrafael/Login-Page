@@ -73,6 +73,8 @@ header {
 main {
     flex-grow: 1;
     /* Faz com que o conteúdo principal ocupe o espaço restante */
+    padding: 20px;
+    text-align: center;
 }
 
 footer {
